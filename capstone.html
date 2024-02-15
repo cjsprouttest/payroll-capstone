@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sprout Payroll</title>
+    <link rel="stylesheet" href="capstone.css">
+
+    <!--Connect Rubik-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="navbar">
+        <div class="navbar-content">
+          <div class="logo">
+            <img src="./Images/Logo_Small.svg">
+          </div>
+        </div>
+        <div class="tab-group">
+          <div class="tab-first">
+            <img class = "tab-icon" src="./Images/Newspaper.svg">
+          </div>
+          <div class="tab">
+            <img class = "tab-icon" src="./Images/ChartBar.svg">
+          </div>
+          <div class="tab">
+            <img class = "tab-icon" src="./Images/Notebook.svg">
+          </div>
+          <div class="tab">
+            <img class = "tab-icon" src="./Images/ArrowsLeftRight.svg">
+          </div>
+          <div class="tab">
+            <img class = "tab-icon" src="./Images/PersonArmsSpread.svg">
+          </div>
+          <div class="tab">
+            <img class = "tab-icon" src="./Images/Smiley.svg">
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-body">
+        <header>
+          <h1>Payroll Runs</h1>
+          <h6>Samsuk Test Company</h6>
+          <img src="./Images/User Profile.svg">
+        </header>
+
+        <div class="content">
+          <div class="button-group">
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">2023<img src="./Images/CaretDown.svg"></button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#">2023</a>
+                <a href="#">2022</a>
+                <a href="#">2021</a>
+                <a href="#">2020</a>
+              </div>
+            </div>
+            <script>
+              /* When the user clicks on the button, 
+              toggle between hiding and showing the dropdown content */
+              function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+              }
+              
+              // Close the dropdown if the user clicks outside of it
+              window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                    }
+                  }
+                }
+              }
+            </script>
+
+            <button class="greenbtn">
+              <img src="./Images/Pencil.svg">Upload YTD
+            </button>
+          </div>
+          <div class="table-full">
+            <table>
+              <tr>
+                <th>Year</th>
+                <th>Month</th>
+                <th>Period</th>
+                <th>Payroll Run Type</th>
+                <th>Pay Group</th>
+                <th>Description</th>
+                <th>Transaction Date</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>2023</td>
+                <td>January</td>
+                <td>3</td>
+                <td>Final Pay</td>
+                <td>-,Doctor,Officer1</td>
+                <td>Final Pay</td>
+                <td>07/10/2024</td>
+                <td>
+                  <div class="status">
+                    <div class="pending">Pending</div>
+                  </div>
+                </td>
+                <td><img class="dots" src="./Images/DotsThreeVertical.svg"></td>
+              </tr>
+              <tr>
+                <td>2023</td>
+                <td>January</td>
+                <td>2</td>
+                <td>Reimbursement/Allowance</td>
+                <td>Doctor</td>
+                <td>REIMBURSEMENT</td>
+                <td>01/11/2024</td>
+                <td>
+                  <div class="status">
+                    <div class="processed">Processed</div>
+                  </div>
+                </td>
+                <td><img class="dots" src="./Images/DotsThreeVertical.svg"></td>
+              </tr>
+              <tr>
+                <td>2023</td>
+                <td>March</td>
+                <td>1</td>
+                <td>Normal Payroll</td>
+                <td>Officer1</td>
+                <td>Payroll for 10/01/2023 - 10/31/2023</td>
+                <td>03/13/2023</td>
+                <td>
+                  <div class="status">
+                    <div class="processed">Processed</div>
+                  </div>
+                </td>
+                <td><img class="dots" src="./Images/DotsThreeVertical.svg"></td>
+              </tr>
+              <tr>
+                <td>2023</td>
+                <td>January</td>
+                <td>1</td>
+                <td>Normal Payroll</td>
+                <td>-,Doctor,Officer1</td>
+                <td>Payroll for 1/1/2023 - 1/31/2023</td>
+                <td>05/03/2023</td>
+                <td>
+                  <div class="status">
+                    <div class="approved">Approved</div>
+                  </div>
+                </td>
+                <td><img class="dots" src="./Images/DotsThreeVertical.svg"></td>
+              </tr>
+            </table>
+          <div class="pagination">
+            <div class="item-count">
+              Items per page
+              <div class="dropdown-small">
+                <button onclick="myFunction2()" class="dropbtnsmall">10<img src="./Images/CaretDown.svg"></button>
+                <div id="myDropdownSmall" class="dropdown-content-small">
+                  <a href="#">10</a>
+                  <a href="#">20</a>
+                </div>
+              </div>
+              <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction2() {
+                  document.getElementById("myDropdownSmall").classList.toggle("show");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtnsmall')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content-small");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
+              </script>
+            </div>
+            <div class="controls">
+              <img src="./Images/CaretLeft2.svg">
+              <img src="./Images/CaretLeft.svg">
+              <div class="form-group">
+                <label for="page-count">Page</label>
+                <input type="text" placeholder="1" name="page" id="page-count"/>
+                of 1
+              </div>
+              <img src="./Images/CaretRight.svg">
+              <img src="./Images/CaretRight2.svg">
+            </div>
+            <label>Showing 1 - 4 of 4</label>
+          </div>
+        </div>
+        </div>
+        <footer>
+          <p>Copyright © 2024 Sprout Payroll. All Rights Reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

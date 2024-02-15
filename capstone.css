@@ -1,0 +1,345 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    font: 14px 'Rubik', sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    background: #F0F2F2;
+    min-height: 100vh;
+}
+
+/**navbar*/
+#navbar {
+    background-color: #00291B;
+    padding: 36px 20px;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-group {
+    margin-top: 24px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tab-first {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #2D4F43;
+}
+
+.tab {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.tab:hover {
+    background-color: #2D4F43;
+}
+/**/
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+header {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    display: flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E1E6E4;
+}
+
+h1 {
+    flex: 1 0 0;
+    font: 16px 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    padding: 24px 40px;
+    gap: 24px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+/**https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown**/
+.dropbtn {
+    display: flex;
+    width: 320px;
+    padding: 12px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    justify-content: space-between;
+    
+    background-color: #ffffff;
+    color: #00291B;
+    font: 16px 'Rubik', sans-serif;
+    border: 1px solid #E1E6E4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #5A756B;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+.show {display: block;}
+
+.dropbtnsmall {
+    display: flex;
+    padding: 4px 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    justify-content: space-between;
+    
+    background-color: #ffffff;
+    color: #3C5B51;
+    font: 14px 'Rubik', sans-serif;
+    border: 1px solid #E1E6E4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown-small {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-small {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content-small a {
+  color: #5A756B;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-small a:hover {background-color: #ddd;}
+.show {display: block;}
+/**/
+
+.greenbtn {
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    background-color: #17AD49;
+    border: 1px solid #E1E6E4;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-weight: 500;color: var(--light-neutral-neutral-0, #FFF);
+
+    /* Web/Button/100 */
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 100% */
+}
+
+.greenbtn:hover {background-color: #33DA6B;}
+
+.table-full {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #E1E6E4;
+    border-radius: 4px;
+}
+
+tr {
+    border-bottom: 1px solid #E1E6E4;
+}
+
+th, td {
+    padding: 16px;
+}
+
+th {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.status {
+    display: flex;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.56px;
+}
+
+.pending {
+    padding: 4px;
+    background-color: #FFF9E6;
+    color: #8D5200;
+}
+
+.processed {
+    padding: 4px;
+    background-color: #E6EFFF;
+    color: #0F6EEB;
+}
+
+.approved {
+    padding: 4px;
+    background-color: #E6FFEE;
+    color: #17AD49;
+}
+
+.pagination {
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    flex: 100%;
+    font-size: 14px;
+    color: #3C5B51;
+}
+
+.controls {
+    display: flex;
+    padding: 4px 8px;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#page-count {
+    width: 48px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #A5B3AF;
+    border-radius: 4px;
+    padding: 2px 0px;
+}
+
+footer {
+    display: flex;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+
+    background: #E1E6E4;
+    color: #00291B;
+    text-align: center;
+}
